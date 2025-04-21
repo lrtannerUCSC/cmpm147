@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
-
-	<!-- Use UTF character set, a good idea with any webpage -->
+	<title>Alternate Worlds - Procedural Generation</title>
 	<meta charset="UTF-8" />
-	<!-- Set viewport so page remains consistently scaled w narrow devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/site.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-	<!-- Load jQuery library -->
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous"></script>
-	<!-- Load p5.js library -->
-	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+	<!-- Libraries -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
 
-	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
-    <script type="text/javascript" src="../js/site.js" DEFER></script>
-	<!-- Use me for a JavaScript OOP Project -->
-	<script type="text/javascript" src="./js/project.js" DEFER></script>
-	<!-- Use me for a p5.js project -->
-	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+	<!-- Project Files -->
+	<script type="text/javascript" src="./js/p2_base.js" defer></script>
+	<script type="text/javascript" src="./js/p2_solution.js" defer></script>
 </head>
 <body>
-	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
-
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Alternate Worlds</h1>
 
 			<div class="minor-section">
-				<div id="canvas-container">
-					<!-- canvas will be added here -->
-				</div>
+				<button id="reseedButton">Reseed</button>
+				<span id="seedReport"></span>
+				<div id="canvasContainer"></div>
+				<textarea cols="20" rows="20" id="asciiBox" 
+					style="opacity: 0.5; letter-spacing: 1ex; width: 320px; 
+					margin: 10px; font-family: monospace;"></textarea>
+                
                 <div class="fullscreen-box">
                     <button id="fullscreen">Fullscreen</button>
                 </div>
@@ -45,25 +37,23 @@
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>A procedurally generator that can create forests, with rivers, clearings, and houses, or dungeons with chests and passageways.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>The world uses Perlin noise for river generation and cellular automata for terrain. The day/night cycle is controlled by a sine wave function, and houses emit light during nighttime. The dungeons are generated the same way, except that they generate paths between rooms and clickable chests.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>The part that gave me the most difficulty was creating the lookup table and understanding the grid of the tilemap to place the correct tiles. I also liked figuring out the code to create passageways. I am not very experienced with HTML so creating more buttons was also somewhat difficult</p>
 			</div>
-
 		</section>
-		<nav id="links" class="minor-section">
-			<!-- Put link back to homepage here. -->
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-            </ul>
+		<nav id="links">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+			</ul>
 		</nav>
 	</main>
 </body>
