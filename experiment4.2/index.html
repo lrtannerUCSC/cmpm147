@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asteroid Miner: Cosmic Extraction</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script type="text/javascript" src="./js/xxhash.min.js" defer></script>
+    <script type="text/javascript" src="./js/engine.js" defer></script>
+    <script type="text/javascript" src="./js/my_world.js" defer></script>
+</head>
+<body>
+    <main id="content">
+        <section>
+            <h1>Asteroid Miner: Cosmic Extraction</h1>
+
+            <div class="minor-section">
+                <div id="container"></div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+            </div>
+
+            <div class="minor-section">
+                <h2>Artist Statement</h2>
+                <p>Asteroid Miner: Cosmic Extraction transforms the infinite void of space into a playground for industrial exploitation. Players take on the role of a lone spaceship pilot, harvesting resources from celestial bodies in an endless cycle of extraction and expansion.</p>
+                <p>The minimalist aesthetic—dark cosmic backdrops and gray, cratered asteroids—reinforces the isolation of deep space while highlighting the mechanical nature of the mining process. The game critiques humanity's relentless pursuit of resources, framing space as just another frontier to be strip-mined for profit.</p>
+            </div>
+
+            <div class="minor-section">
+                <h2>Technical Description</h2>
+                <p>Built with p5.js, Asteroid Miner combines procedural generation with incremental game mechanics to create an endless mining simulator.</p>
+                
+                <h3>Core Mechanics</h3>
+                <ul>
+                    <li><strong>Procedural Asteroids:</strong> Uses XXH32 hashing to determine asteroid placement, ensuring consistent yet varied mineral deposits</li>
+                    <li><strong>Spaceship Navigation:</strong> Players click to move their ship across an isometric grid, with smooth movement interpolation</li>
+                    <li><strong>Mining System:</strong> Asteroids require multiple "clicks" (drill hits) to break, rewarding coins upon destruction</li>
+                    <li><strong>Upgrade Economy:</strong> Players spend coins on Drill Power, increasing mining efficiency</li>
+                </ul>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Deterministic Resource Placement – Asteroids appear based on world seed</li>
+                    <li>Tile-Based Movement – Smooth isometric grid traversal</li>
+                    <li>Destructible Asteroids – Each has health (default: 5) requiring strategy</li>
+                    <li>Automated Mining – Ships mine automatically when stationary</li>
+                </ul>
+            </div>
+
+            <div class="minor-section">
+                <h2>How to Play</h2>
+                <ul>
+                    <li>Click anywhere to move your ship</li>
+                    <li>Hover over asteroids to mine them automatically</li>
+                    <li>Earn coins from destroyed asteroids</li>
+                    <li>Buy Drill Upgrades to mine faster and harder rocks</li>
+                </ul>
+            </div>
+
+            <div class="minor-section">
+                <h2>Development Notes</h2>
+                <h3>From Whack-a-Mole to Space Miner</h3>
+                <p>The project began as a Whack-a-Mole clone but pivoted to space mining when the black "holes" resembled asteroids:</p>
+                <ul>
+                    <li>Added Resource Depletion mechanics</li>
+                    <li>Implemented strategic Movement positioning</li>
+                    <li>Created meaningful Upgrade progression</li>
+                </ul>
+
+                <h3>Influences</h3>
+                <ul>
+                    <li>Asteroid Mining Games (Elite Dangerous, Deep Rock Galactic)</li>
+                    <li>Incremental Games (Cookie Clicker's upgrade loops)</li>
+                    <li>Minimalist Aesthetics (FTL: Faster Than Light's UI)</li>
+                </ul>
+
+                <h3>Challenges & Solutions</h3>
+                <ul>
+                    <li><strong>Isometric Coordinate Confusion:</strong> Created tileToScreen() helper function</li>
+                    <li><strong>Mining Feedback:</strong> Added console logs to debug asteroid health</li>
+                    <li><strong>Movement Jank:</strong> Implemented smooth position interpolation</li>
+                </ul>
+
+                <h3>Future Expansions</h3>
+                <ul>
+                    <li>Variable Asteroid Types (rare minerals worth more)</li>
+                    <li>Gravity Mechanics (planets with fuel requirements)</li>
+                    <li>Enemy Encounters (space pirates)</li>
+                    <li>Base Building (orbital refineries)</li>
+                </ul>
+            </div>
+        </section>
+        <nav id="links">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>

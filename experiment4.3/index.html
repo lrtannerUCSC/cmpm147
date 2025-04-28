@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whack-a-Mole: Infinite Capitalism</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script type="text/javascript" src="./js/xxhash.min.js" defer></script>
+    <script type="text/javascript" src="./js/engine.js" defer></script>
+    <script type="text/javascript" src="./js/my_world.js" defer></script>
+</head>
+<body>
+    <main id="content">
+        <section>
+            <h1>Whack-a-Mole: Infinite Capitalism</h1>
+
+            <div class="minor-section">
+                <div id="container"></div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+            </div>
+
+            <div class="minor-section">
+                <h2>Artist Statement</h2>
+                <p>Whack-a-Mole: Infinite Capitalism is a satirical take on clicker games and mindless consumerism, wrapped in the familiar mechanics of the classic arcade game. The project explores themes of exploitation, endless growth, and the absurdity of capitalism—where the player is incentivized to breed more moles just to whack them for profit.</p>
+                <p>The game starts simple: click moles, earn coins, buy upgrades. But as the player progresses, they unlock the ability to increase mole spawn rates and create more holes, turning the game into a grotesque parody of capitalist expansion. The minimalist black holes and white moles maintain focus on the core mechanic, while subtle red flashes provide satisfying feedback when a mole is whacked.</p>
+            </div>
+
+            <div class="minor-section">
+                <h2>Technical Description</h2>
+                <p>Built using p5.js, Whack-a-Mole: Infinite Capitalism leverages procedural generation and deterministic randomness to create an endless, replayable experience.</p>
+                
+                <h3>Core Mechanics</h3>
+                <ul>
+                    <li><strong>Procedural Hole Generation:</strong> Uses XXH32 hashing to determine hole placement</li>
+                    <li><strong>Mole Spawning Logic:</strong> Moles appear based on spawn rate with pop-up animations</li>
+                    <li><strong>Click Detection:</strong> Checks against deterministic seed for whack accuracy</li>
+                    <li><strong>Coin Economy:</strong> Whacked moles grant coins for upgrades</li>
+                </ul>
+
+                <h3>Upgrades</h3>
+                <ul>
+                    <li><strong>Auto-Whacker:</strong> Automatically whacks moles (cooldown decreases with upgrades)</li>
+                    <li><strong>More Holes:</strong> Increases number of active holes</li>
+                    <li><strong>More Moles:</strong> Boosts spawn rate and speed</li>
+                </ul>
+
+                <h3>Challenges & Solutions</h3>
+                <ul>
+                    <li><strong>Spam-Clicking Exploit:</strong> Left in as commentary on capitalist exploitation</li>
+                    <li><strong>Deterministic Randomness:</strong> Ensures fair mole appearances</li>
+                    <li><strong>Isometric Coordinate Confusion:</strong> Adjusted calculations for proper tile detection</li>
+                </ul>
+            </div>
+
+            <div class="minor-section">
+                <h2>How to Play</h2>
+                <ul>
+                    <li>Click moles to earn coins</li>
+                    <li>Buy upgrades to automate and expand</li>
+                    <li>Profit endlessly—the moles never stop coming</li>
+                    <li><em>(Note: No actual moles were harmed in the making of this game)</em></li>
+                </ul>
+            </div>
+
+            <div class="minor-section">
+                <h2>Development Notes</h2>
+                <h3>Original Concept: Asteroid Mining</h3>
+                <p>The project began as an asteroid-mining game before pivoting when the black ellipses resembled mole holes. The asteroid concept was later revisited in another project.</p>
+
+                <h3>Cookie Clicker Influence</h3>
+                <p>Inspired by incremental games, the economy features:</p>
+                <ul>
+                    <li>Manual clicking (early-game effort)</li>
+                    <li>Automation (Auto-Whacker)</li>
+                    <li>Expansion (More Holes)</li>
+                </ul>
+
+                <h3>Future Expansions</h3>
+                <ul>
+                    <li>Variable Mole Values (higher-value targets)</li>
+                    <li>Visual Variety (golden/armored moles)</li>
+                    <li>Capitalist Satire ("Mole Factories" upgrade)</li>
+                </ul>
+            </div>
+        </section>
+        <nav id="links">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>

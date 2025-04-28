@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Endless Harvest - Farming Simulator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script type="text/javascript" src="./js/xxhash.min.js" defer></script>
+    <script type="text/javascript" src="./js/engine.js" defer></script>
+    <script type="text/javascript" src="./js/my_world.js" defer></script>
+</head>
+<body>
+    <main id="content">
+        <section>
+            <h1>Endless Harvest</h1>
+
+            <div class="minor-section">
+                <div id="container"></div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+            </div>
+
+            <div class="minor-section">
+                <h2>Artist Statement</h2>
+                <p>Endless Harvest transforms the pastoral ideal of farming into a meditation on sustainability and labor. Set in a procedurally generated landscape of fertile plots and winding rivers, players must balance water collection, crop nurturing, and economic growth. The vibrant greens of young plants contrast with the deep blues of water sources, creating a visually soothing yet mechanically engaging experience.</p>
+                <p>The game questions modern agricultural practices—where efficiency often trumps ecological balance. By tying progression directly to water management, Endless Harvest invites players to consider the real-world tensions between abundance and resource depletion. The pink "bloom" phase of each plant serves as a visual reward, a fleeting moment of beauty before the cycle begins anew.</p>
+            </div>
+
+            <div class="minor-section">
+                <h2>Technical Description</h2>
+                <p>Built with p5.js, this farming simulator combines:</p>
+                <ul>
+                    <li>Procedural water systems (Perlin noise)</li>
+                    <li>Tile-based agriculture (deterministic plot placement)</li>
+                    <li>Resource management (water carrying capacity)</li>
+                    <li>Growth cycles (with visual progression)</li>
+                </ul>
+                
+                <h3>Core Mechanics</h3>
+                <h4>Water Collection</h4>
+                <ul>
+                    <li>Players refill their watering can at river tiles (generated via noise algorithms)</li>
+                    <li>Upgrades increase carrying capacity (maxWateringCan = level*2 + 10)</li>
+                </ul>
+                
+                <h4>Crop Cultivation</h4>
+                <ul>
+                    <li>Each plot requires 5 "water units" to mature</li>
+                    <li>Plants progress through stages:
+                        <ul>
+                            <li>Sprout (small green circle)</li>
+                            <li>Mature (larger green circle)</li>
+                            <li>Blooming (pink circle, harvestable for +5 coins)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>Economy</h4>
+                <ul>
+                    <li>Harvesting blooms grants coins</li>
+                    <li>Coins buy watering can upgrades</li>
+                </ul>
+            </div>
+
+            <div class="minor-section">
+                <h2>How to Play</h2>
+                <ul>
+                    <li>Move by clicking tiles</li>
+                    <li>Collect water at blue river tiles</li>
+                    <li>Water plants (automatic when standing on plots)</li>
+                    <li>Harvest pink blooms for coins</li>
+                    <li>Upgrade your can to farm more efficiently</li>
+                    <li><em>Pro tip: Plan routes to optimize water refills!</em></li>
+                </ul>
+            </div>
+
+            <div class="minor-section">
+                <h2>Development Notes</h2>
+                <h3>From Asteroids to Agriculture</h3>
+                <p>The farming mechanics evolved from Asteroid Miner's resource extraction:</p>
+                <ul>
+                    <li>Health System → Growth Stages (5 drill hits → 5 water units)</li>
+                    <li>Movement Retention (same isometric navigation)</li>
+                    <li>Upgrade Philosophy (efficiency over expansion)</li>
+                </ul>
+                
+                <h3>Design Inspirations</h3>
+                <ul>
+                    <li>Stardew Valley (charming farming loops)</li>
+                    <li>Hydration Mechanics (e.g., The Long Dark)</li>
+                    <li>Minimalist UI (influenced by Islanders)</li>
+                </ul>
+                
+                <h3>Future Expansions</h3>
+                <ul>
+                    <li>Crop Varieties (wheat, carrots, etc.) with unique values</li>
+                    <li>Seasons affecting water availability</li>
+                    <li>Tool Upgrades (hoes, sprinklers)</li>
+                    <li>Market Fluctuations (dynamic pricing)</li>
+                </ul>
+            </div>
+        </section>
+        <nav id="links">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>
